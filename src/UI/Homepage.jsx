@@ -1,7 +1,10 @@
 import React from 'react'
-import UseState from '../ReactHooks/UseState'
 import Title from './Title'
+import UseState from '../ReactHooks/UseState'
 import UseEffect from '../ReactHooks/UseEffect'
+import UseContext from '../ReactHooks/UseContext'
+import AppContext from '../../admin/AppContext'
+import UseReducer from '../ReactHooks/UseReducer'
 
 const Homepage = () => {
     return (
@@ -11,6 +14,12 @@ const Homepage = () => {
 
             <Title name="UseEffect" />
             <UseEffect />
+
+            <Title name="UseContext" />
+            <AppContext />
+
+            <Title name="UseReducer" />
+            <UseReducer />
         </>
     )
 }
