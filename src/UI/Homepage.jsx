@@ -5,6 +5,10 @@ import UseEffect from '../ReactHooks/UseEffect'
 import UseContext from '../ReactHooks/UseContext'
 import AppContext from '../../admin/AppContext'
 import UseReducer from '../ReactHooks/UseReducer'
+import UseRef from '../ReactHooks/UseRef'
+import UseLayoutEffect from '../ReactHooks/UseLayoutEffect'
+import UseMemo from '../ReactHooks/UseMemo'
+import UseCallback from '../ReactHooks/UseCallback'
 
 const Homepage = () => {
     return (
@@ -20,6 +24,18 @@ const Homepage = () => {
 
             <Title name="UseReducer" />
             <UseReducer />
+
+            <Title name="UseRef" />
+            <UseRef />
+
+            <Title name="UseLayoutEffect" />
+            <UseLayoutEffect />
+
+            <Title name="UseMemo" />
+            <UseMemo />
+
+            <Title name="UseCallback" />
+            <UseCallback />
         </>
     )
 }
