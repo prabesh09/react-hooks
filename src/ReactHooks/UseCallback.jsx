@@ -1,31 +1,19 @@
-import React, { useCallback, useState } from 'react'
+import React, { useState, useCallback } from 'react';
 
-const UseCallback = () => {
-    const [count, setCount] = useState(1)
-    const [todo, setTodo] = useState(["New Entry x0"])
+function App() {
+    const [count, setCount] = useState(0);
 
-    const increment = () => {
-        setCount(count + 1)
-    }
-
-
-    const updateTodo = useCallback(() => {
-        setTodo([...todo, `New Entry x${count}`])
-        console.log("child render")
-    }, [todo])
+    // Define a callback function using useCallback
+    const increment = useCallback(() => {
+        setCount(count + 1);
+    }, [count]);
 
     return (
-        <div className='text-center'>
-            {todo.map((value, index) => (
-                <h1 key={index} className='bg-blue-400 m-3 text-white p-2'>{value}</h1>
-            ))
-            }
-            <button className='bg-pink-500 text-white px-5 py-3 rounded-xl' onClick={updateTodo}>Add New Todo</button>
-            <br />
-            <span className='text-2xl'>{count} </span>
-            <button className='bg-cyan-500 my-2 text-white p-3' onClick={increment}>Update Count</button>
+        <div className='text-center '>
+            <h1 className='text-3xl'>Count: {count}</h1>
+            <button className='bg-blue-500 py-1 px-3 text-white m-3' onClick={increment}>Increment</button>
         </div>
-    )
+    );
 }
 
-export default UseCallback
+export default App;

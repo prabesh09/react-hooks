@@ -15,6 +15,7 @@ const UseMemo = () => {
     return (
         <div className='text-center'>
             <button onClick={handleSortClick} className='bg-lime-500 px-5 text-3xl text-white text-center'>Sort</button>
+            <h1 className='text-2xl m-3'>The list is in {sortOrder === 'asc' ? 'ascending' : 'descending'} order</h1>
             <ul className='flex justify-around m-5 text-4xl font-bold'>
                 {animals.map(animal => (
                     <li key={animal}>{animal}</li>
